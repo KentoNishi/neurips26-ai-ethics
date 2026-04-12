@@ -22,8 +22,19 @@ We began a document-based comparison workflow: for each candidate pair, we read 
 
 Milestone-2 status:
 - Completed preliminary pair triage labels (LLM-assisted) to identify likely-valid successor pairs and guide sampling.
-- Selected a stratified interview sample of 25 cases spanning steering categories and ethics issue types.
+- Selected a stratified interview sample of 25 cases spanning steering categories and ethics issue types, explicitly designed for coverage rather than representativeness:
+  - steering quotas: 11 ``strictly meaningful'', 6 ``intrinsic only'', 8 ``unaddressed''
+  - round-robin across four issue buckets: harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety
 - Prepared recruitment outreach drafts (no recruiting yet; pending staff OK + finalized protocol/consent).
+
+Preliminary ``what changed'' snapshot (triage labels on 459 likely-valid pairs):
+- 217: no observable change in successor
+- 153: rhetorical-only changes (limitations/harms framing without technical revision)
+- 57: methodological+procedural changes
+- 14: procedural-only changes
+- 5: methodological-only changes
+
+These are preliminary triage labels used to guide sampling and manual review; they are not yet the final human-coded analysis.
 
 ## 4) Milestone-2 outputs included in this submission
 - Updated manuscript draft: `sample-sigconf-authordraft.tex`
@@ -106,4 +117,3 @@ Your participation is voluntary. You may skip any question or stop the interview
 
 ## Questions
 If you have questions, contact: kentonishi@college.harvard.edu
-
