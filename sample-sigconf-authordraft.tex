@@ -44,33 +44,15 @@
 %% for your publication.
 %%
 %%
-\documentclass[sigconf]{acmart} % authordraft
+\documentclass[sigconf,nonacm]{acmart} % authordraft
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
 \AtBeginDocument{%
   \providecommand\BibTeX{{%
     Bib\TeX}}}
 
-%% Rights management information.  This information is sent to you
-%% when you complete the rights form.  These commands have SAMPLE
-%% values in them; it is your responsibility as an author to replace
-%% the commands and values with those provided to you when you
-%% complete the rights form.
-\setcopyright{acmlicensed}
-\copyrightyear{2018}
-\acmYear{2018}
-\acmDOI{XXXXXXX.XXXXXXX}
-%% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[Conference acronym 'XX]{Make sure to enter the correct
-  conference title from your rights confirmation email}{June 03--05,
-  2018}{Woodstock, NY}
-%%
-%%  Uncomment \acmBooktitle if the title of the proceedings is different
-%%  from ``Proceedings of ...''!
-%%
-%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
-%%  June 03--05, 2018, Woodstock, NY}
-\acmISBN{978-1-4503-XXXX-X/2018/06}
+%% Rights management information.
+%% This is a course project report (non-ACM), so we suppress ACM rights and venue metadata.
 
 
 %%
@@ -106,7 +88,6 @@
 %%\citestyle{acmauthoryear}
 
 \settopmatter{printacmref=false}
-\setcopyright{none}
 \renewcommand\footnotetextcopyrightpermission[1]{}
 \pagestyle{plain}
 
@@ -139,7 +120,7 @@
   \city{Cambridge}
   \state{MA}
   \country{USA}}
-\email{alaprevotte@g.harvard.edu} % based on research paper affiliation at Harvard :contentReference[oaicite:0]{index=0}
+\email{alaprevotte@g.harvard.edu}
 
 \author{Isaiah Bullock}
 \affiliation{%
@@ -147,7 +128,7 @@
   \city{Cambridge}
   \state{MA}
   \country{USA}}
-\email{isaiahabbey@college.harvard.edu} % Harvard Crimson athlete commit :contentReference[oaicite:1]{index=1}
+\email{isaiahabbey@college.harvard.edu}
 
 \author{Mfoniso M. Andrew}
 \affiliation{%
@@ -155,7 +136,7 @@
   \city{Cambridge}
   \state{MA}
   \country{USA}}
-\email{mfonisoandrew@college.harvard.edu} % Harvard track & field athlete :contentReference[oaicite:2]{index=2}
+\email{mfonisoandrew@college.harvard.edu}
 
 %%
 %% By default, the full list of authors will be used in the page
@@ -169,7 +150,7 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-Selective AI/ML conferences increasingly incorporate ethics governance into peer review (ethics flags, impact statements). When reviewers raise ethics concerns and a paper is rejected or withdrawn, authors typically revise and submit elsewhere to a fresh reviewer pool. Those revisions can be substantive (data, evaluation, scope, release decisions) or rhetorical (expanded limitations and harms framing without changing the technical core). We study these choices by following ICLR 2021--2026 submissions whose reviews included ethics flags into the next public version of the project, and comparing the criticized submission, reviews, and successor paper side by side. Across 47,893 submissions and 185,194 public reviews, we identify 2,498 submissions with reviewer ethics flags, including 1,857 that were rejected or withdrawn. Using OpenAlex-based retrieval, we produced 6,618 candidate successor matches and 601 best-match candidates (not all are true successors). In a first-pass screening of these candidates, we judged 459 pairs likely to describe the same project or a direct descendant; within this screened set, many successors show no observable change or mainly rhetorical change, while a smaller subset show procedural and/or methodological change. We selected 25 stratified cases for author interviews and have begun recruitment; interviews are not yet complete.
+Selective AI/ML conferences increasingly incorporate ethics governance into peer review (ethics flags, impact statements). When reviewers raise ethics concerns and a paper is rejected or withdrawn, authors typically revise and submit elsewhere to a new reviewer pool. Those revisions can be substantive (data, evaluation, scope, release decisions) or rhetorical (expanded limitations and harms framing without changing the technical core). We study these choices by following ICLR 2021--2026 submissions whose reviews included ethics flags into the next public version of the project, and comparing the criticized submission, reviews, and successor paper side by side. Across 47,893 submissions and 185,194 public reviews, we identify 2,498 submissions with reviewer ethics flags, including 1,857 that were rejected or withdrawn. Using OpenAlex-based retrieval, we produced 6,618 candidate successor matches and 601 best-match candidates (not all are true successors). In a first-pass screening of these candidates, we judged 459 pairs likely to describe the same project or a direct descendant; within this screened set, many successors show no observable change or mainly rhetorical change, while a smaller subset show procedural and/or methodological change. We selected 25 stratified cases for author interviews and have begun recruitment; interviews are not yet complete.
 \end{abstract}
 
 %%
@@ -232,15 +213,15 @@ Selective AI/ML conferences increasingly incorporate ethics governance into peer
 
 \section{Introduction}
 
-In AI and machine learning, selective conferences are primary venues for publishing cutting-edge research. Researchers aim to publish their strongest work at venues such as NeurIPS, ICML, and ICLR, and other researchers often build their next papers on work accepted there. Because acceptance and rejection at these venues affect which projects gather attention and which lines of work move forward, conference organizers and program chairs have also used the same process to ask for ethical reflection alongside technical evaluation. By the early 2020s, broader impact statements, ethics statements, and reviewer ethics flags had become part of review at these venues \citep{prunkl2021institutionalizing,neurips2021call,neurips2021retrospective,iclr2023ethics}. Reviewers could then raise privacy, fairness, safety, misuse, or deployment concerns alongside technical objections. In many cases, those concerns turned on specific properties of the system under review. For example, \citet{staab2024beyond} show that large language models can infer sensitive personal attributes such as location, income, and sex from real Reddit profiles.
+In AI and machine learning, selective conferences are primary venues for publishing cutting-edge research. Researchers aim to publish their strongest work at venues such as NeurIPS, ICML, and ICLR, and other researchers often build their next papers on work accepted there. Because acceptance and rejection at these venues affect which projects attract attention and which research directions receive sustained investment, organizers have increasingly extended peer review to include ethical reflection alongside technical evaluation. By the early 2020s, broader impact statements, ethics statements, and reviewer ethics flags had become part of review at these venues \citep{prunkl2021institutionalizing,neurips2021call,neurips2021retrospective,iclr2023ethics}. Reviewers could then raise privacy, fairness, safety, misuse, or deployment concerns alongside technical objections. In many cases, those concerns depended on specific properties of the system under review. For example, \citet{staab2024beyond} show that large language models can infer sensitive personal attributes such as location, income, and sex from real Reddit profiles.
 
-When reviewers criticize a paper on grounds like these, the authors usually do not return to the same readers. Instead, in this field, authors commonly revise the work and submit it to another conference or journal, where a different reviewer pool reads the paper from scratch. Under those conditions, the authors can respond in several ways. For one, they can replace a dataset or add an evaluation, which changes the evidence they offer in support of their claims. Alternatively, they can narrow a claim or change whether code or model weights will be released, which changes the scope of the work or the conditions under which other researchers can use it. They can also expand a limitations section, soften claims, or elaborate possible harms, which changes how the work is presented to the next reviewers even when the underlying research process may look much the same. However, these revisions do not all answer the original criticism in the same way. Revising data or evaluation changes the research itself. By contrast, revising limitations or harms language changes how the authors present the work to the next readers. Because reviewers usually see a paper after much of the technical work is already in place but before the authors settle the version they will submit elsewhere or circulate publicly, the period between one decision and the next submission offers a direct view of what the authors chose to change and what they chose to leave alone.
+When reviewers criticize a paper on grounds like these, the authors usually do not return to the same readers. Instead, in this field, authors commonly revise the work and submit it to another conference or journal, where a different reviewer pool reads the paper from scratch. Between venues, authors may replace a dataset or add an evaluation, which changes the evidence offered in support of their claims. They may narrow a claim or change whether code or model weights will be released, which changes the scope of the work and the conditions under which other researchers can use it. They may also expand a limitations section, soften claims, or elaborate possible harms, which changes how the work is presented to the next reviewers even when the underlying research process remains the same. These revisions address criticism in different ways: revising data or evaluation changes the research itself, while revising harms and limitations changes how the work is framed for new readers. Because reviewers usually see a paper after much of the technical work is already in place but before the authors settle the version they will submit elsewhere or circulate publicly, the period between one decision and the next submission offers a direct view of what authors chose to change and what they chose to leave alone.
 
 OpenReview publishes the submission, the reviews, the decision, and the associated ethics flags in one public archive. We can therefore read the criticism attached to a paper together with the paper that drew that criticism, and once we trace the next public version of the same project, we can compare that earlier criticism with the revisions its authors later made before another submission. Researchers have already used these records to study ethics review inside a single peer review cycle. \citet{liu2022examining} analyze 96 ethics reviews across 50 NeurIPS 2021 papers, the NeurIPS 2021 retrospective reports conditional acceptances and one rejection on ethical grounds, and ICLR 2023 program chairs report screening 190 papers whose reviews included ethics flags before sending a smaller subset for further follow-up \citep{liu2022examining,neurips2021retrospective,iclr2023ethics}. However, these studies focus on a single review cycle and typically do not follow projects into the next submission, when authors decide what a new set of reviewers will see. We therefore follow ICLR submissions whose reviews included ethics flags into later public versions, manually validate [TODO: number of validated pairs] pairs of original submissions and later papers, and interview [TODO: number of interviewed authors] corresponding authors about how they revised the work before submitting it to a different reviewer pool. Across those materials, [TODO: one-sentence preview of the main empirical pattern]. In the interviews, [TODO: one-sentence preview of the main author-side explanation].
 
 \section{Related Work}
 
-\citet{prunkl2021institutionalizing} describe broader impact statements as an attempt to move ethical reflection into ordinary peer review, and they also explain why that arrangement may produce limited change: reviewers may not share standards, authors may face weak incentives, and ethically salient design choices may already be fixed by the time a paper reaches review. Those timing constraints reappear in work on what authors actually wrote under these requirements. For instance, \citet{nanayakkara2021broader} analyze how NeurIPS authors described societal consequences, including how specific those descriptions were and how they handled uncertainty, and \citet{ashurst2022ethics} extend that analysis at larger scale by showing that authors engaged the requirement unevenly. These studies help us read later additions about harms, limitations, and uncertainty as changes in how authors present a paper to readers. However, they do not yet tell us whether the authors changed the underlying research in the same way.
+\citet{prunkl2021institutionalizing} describe broader impact statements as an attempt to incorporate ethical reflection into ordinary peer review, and they also explain why that arrangement may produce limited change: reviewers may not share standards, authors may face weak incentives, and ethically salient design choices may already be fixed by the time a paper reaches review. Those timing constraints reappear in work on what authors actually wrote under these requirements. For instance, \citet{nanayakkara2021broader} analyze how NeurIPS authors described societal consequences, including how specific those descriptions were and how they handled uncertainty, and \citet{ashurst2022ethics} extend that analysis at larger scale by showing that authors engaged the requirement unevenly. These studies help us read later additions about harms, limitations, and uncertainty as changes in how authors present a paper to readers. However, they do not yet tell us whether the authors changed the underlying research in the same way.
 
 \citet{liu2022examining} are the most directly aligned with our question in their use of public NeurIPS records to analyze how reviewers and authors assigned responsibility for harm and what kinds of revisions reviewers requested. Their analysis remains within a single peer review cycle and does not follow projects into subsequent submissions, where authors decide what to revise, what to defer, what to reframe, and what to leave untouched for a new reviewer pool. That stage is shaped by practical constraints documented in studies of AI work itself. For example, \citet{pant2024ethics} synthesize studies of applied AI practice and report repeated gaps between ethical concern and concrete revision in data practices, evaluation choices, and deployment plans, while \citet{morley2023operationalising} describe similar tensions between general ethical principles and day-to-day engineering constraints. We extend this line of work by comparing criticized submissions with the later papers their authors prepared for another venue, and by interviewing authors about what they changed and why.
 
@@ -256,18 +237,18 @@ We then searched OpenAlex for later versions of each paper using full titles, ti
 
 \subsection{Reading Pairs and Coding Revision}
 
-Automated retrieval cannot determine whether a later paper truly continues the same project, so successor validation requires reading. We therefore use a preliminary screening of candidate pairs (LLM-assisted) to support sampling and planning: for each matched pair, we record whether the later paper appears to be the same project or a direct descendant, and we describe the kinds of changes that are observable between versions (no change, mainly rhetorical change, or procedural/methodological change). We then follow this screening with human-coded validation and inter-rater checks on a subset.
+Automated retrieval cannot determine whether a later paper truly continues the same project, so successor validation requires reading. We therefore conduct a preliminary screening of candidate pairs to support sampling and planning: for each matched pair, we record whether the later paper appears to be the same project or a direct descendant, and we describe the kinds of changes that are observable between versions (no change, mainly rhetorical change, or procedural/methodological change). We then follow this screening with human-coded validation and inter-rater checks on a subset.
 
 \subsection{Interviewing Authors}
 
 By comparing versions, we can see what changed, but we cannot reliably infer why authors changed one part of a project and left another untouched. We therefore conduct semi-structured interviews with corresponding authors (or designated contacts) from a stratified subset of cases. After receiving staff approval to recruit, we sent outreach emails and began scheduling interviews as responses arrive. Interviews are designed to last approximately 30 minutes. We send the consent form in advance and obtain verbal consent at the start of the call (with a separate prompt for permission to record audio).
 
-To keep recruitment consistent and to avoid priming participants toward any single interpretation, we used a short email template that introduces the study at a high level, references the public paper pair we traced, and requests a brief call. The template has the following form (with identifying details omitted):
+To keep recruitment consistent and to avoid introducing case-specific cues, we used a short email template that introduces the study at a high level, references the public paper pair we traced, and requests a brief call. The template has the following form (with identifying details omitted):
 \begin{quote}
 \small
 Hello \{First name\},
 
-We are conducting a study on ethics review processes for AI conferences. We saw that your paper ``\{short paper title\}'' was initially rejected from ICLR \{year\} but later appeared as \{later venue and year\}. We would appreciate a brief video call (about 30 minutes) to learn about what changed between versions and what shaped those decisions.
+We are conducting a study on ethics review processes for AI conferences. We saw that your paper ``\{short paper title\}'' was initially rejected or withdrawn from ICLR \{year\} after receiving ethics-related review feedback, but later appeared as \{later venue and year\}. We would appreciate a brief video call (about 30 minutes) to learn about what changed between versions and what shaped those decisions.
 
 If you are willing, please choose a time at \{scheduling link\}. Participation is voluntary; you may decline or stop at any time.
 
@@ -276,9 +257,11 @@ Sincerely, \{research team\}
 
 \section{Results}
 
-\subsection{The Validated Pair Set}
+\subsection{Corpus and Candidate Successors}
 
-The number of papers whose reviews included ethics flags rose from 107 in 2022 to 1,100 in 2026, and those flagged papers covered concerns about fairness and discrimination, privacy and safety, harmful applications, legal compliance, responsible research practice, and research integrity. From the 1,857 rejected or withdrawn papers in our corpus, our retrieval produced 601 best-match candidate successors. In a first-pass screening, we judged 459 of the 1,857 rejected/withdrawn cases likely to have a true successor in this best-match set. For interviews, we selected 25 cases to cover three steering patterns---cases where revisions are especially legible and substantive, cases where ethics-relevant changes were already present in the original submission, and cases where the flagged concern appears not to be taken up---while also balancing coverage across four issue areas (harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety), and we have begun recruitment and scheduling as responses arrive.
+The number of papers whose reviews included ethics flags rose from 107 in 2022 to 1,100 in 2026, and those flagged papers covered concerns about fairness and discrimination, privacy and safety, harmful applications, legal compliance, responsible research practice, and research integrity. From the 1,857 rejected or withdrawn papers in our corpus, our retrieval produced 601 best-match candidate successors. In a first-pass screening, we judged 459 of the 1,857 rejected/withdrawn cases likely to have a true successor in this best-match set.
+
+For interviews, we selected 25 cases using stratified quotas intended to cover distinct steering relationships and issue areas rather than to estimate population rates. Based on our preliminary screening notes, the sample includes 11 cases in which the successor appears to show especially clear, substantive changes; 6 cases in which ethics-relevant changes were already present in the original submission and the successor largely reflects intrinsic research decisions; and 8 cases in which the flagged concern appears not to be taken up in the successor. We also balanced coverage across four issue areas (harmful applications: 4; fairness/discrimination: 9; responsible research practice: 6; privacy/security/safety: 6). We have begun recruitment and scheduling as responses arrive.
 
 \subsection{What Changed in Later Versions}
 
@@ -286,9 +269,9 @@ In our current first-pass screening of the 459 likely successor pairs, 217 succe
 
 The substantive changes in our interview sampling set often fall into a few recurring categories. Some successors add dataset curation and quality-control procedures (e.g., explicit leakage checks, majority voting, or volunteer annotation workflows for benchmark construction). Others add additional evaluation and defense analysis (e.g., ablations testing safety finetuning or other mitigations for backdoor and jailbreak-related work). Still others add documentation and governance-relevant detail (e.g., clearer descriptions of consent/IRB in human-subjects settings, dataset cleaning steps to remove identifiers in sensitive domains, or more explicit discussion of data provenance and licensing). By contrast, in unaddressed cases the successor often expands exposition or experiments while leaving the ethics-flagged concern unaddressed in the successor text.
 
-\subsection{What Authors Said}
+\subsection{Interview Focus}
 
-In the interviews, we ask authors to reconstruct what changed between the ICLR submission and the successor, what feedback mattered most, and what constrained revision before submitting to a different venue; we then ask directly about ethics review and whether it influenced technical decisions, evaluation choices, release decisions, or only the framing presented to a new reviewer pool. These interviews are designed to clarify when rhetorical revisions reflect strategic reframing versus when they reflect real constraints on changing already-implemented systems.
+In the interviews, we ask authors to reconstruct what changed between the ICLR submission and the successor, what feedback mattered most, and what constrained revision before submitting to a different venue. We then ask directly about ethics review and whether it influenced technical decisions, evaluation choices, release decisions, or only the framing presented to a new reviewer pool. These interviews are designed to clarify when rhetorical revisions reflect strategic reframing versus when they reflect constraints on changing already-implemented systems.
 
 \section{Discussion}
 
@@ -879,7 +862,7 @@ Selective AI conferences ask reviewers to evaluate ethical concern alongside tec
 % rhoncus. Maecenas eu arcu ac neque placerat aliquam. Nunc pulvinar
 % massa et mattis lacinia.
 
-\bibliographystyle{apalike}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
 \end{document}
 \endinput

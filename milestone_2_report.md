@@ -21,9 +21,9 @@ Current corpus / retrieval totals:
 We began a document-based comparison workflow: for each candidate pair, we read (i) the criticized submission + its ethics-flagged reviews and (ii) the next public version candidate, then record what changed.
 
 Milestone-2 status:
-- Completed preliminary pair triage labels (LLM-assisted) to identify likely-valid successor pairs and guide sampling.
+- Completed preliminary pair triage labels to identify likely-valid successor pairs and guide sampling.
 - Selected a stratified interview sample of 25 cases spanning steering categories and ethics issue types, explicitly designed for coverage rather than representativeness:
-  - steering quotas: 11 ``strictly meaningful'', 6 ``intrinsic only'', 8 ``unaddressed''
+  - steering quotas: 11 strictly meaningful, 6 intrinsic only, 8 unaddressed
   - round-robin across four issue buckets: harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety
 - After receiving staff approval to recruit, we sent standardized outreach emails and are now scheduling interviews as responses arrive.
 
