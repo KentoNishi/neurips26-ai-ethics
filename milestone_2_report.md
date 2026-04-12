@@ -25,7 +25,7 @@ Milestone-2 status:
 - Selected a stratified interview sample of 25 cases spanning steering categories and ethics issue types, explicitly designed for coverage rather than representativeness:
   - steering quotas: 11 ``strictly meaningful'', 6 ``intrinsic only'', 8 ``unaddressed''
   - round-robin across four issue buckets: harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety
-- Prepared recruitment outreach drafts (no recruiting yet; pending staff OK + finalized protocol/consent).
+- Received staff OK to recruit and sent outreach emails; we are currently awaiting responses and scheduling interviews.
 
 Preliminary ``what changed'' snapshot (triage labels on 459 likely-valid pairs):
 - 217: no observable change in successor

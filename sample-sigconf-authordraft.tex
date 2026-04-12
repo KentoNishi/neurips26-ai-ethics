@@ -169,7 +169,7 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-Selective AI/ML conferences increasingly incorporate ethics governance into peer review (ethics flags, impact statements). When reviewers raise ethics concerns and a paper is rejected or withdrawn, authors typically revise and submit elsewhere to a fresh reviewer pool. Those revisions can be substantive (data, evaluation, scope, release decisions) or rhetorical (expanded limitations and harms framing without changing the technical core). We study these choices by following ICLR 2021--2026 submissions whose reviews included ethics flags into the next public version of the project, and comparing the criticized submission, reviews, and successor paper side by side. Across 47,893 submissions and 185,194 public reviews, we identify 2,498 submissions with reviewer ethics flags, including 1,857 that were rejected or withdrawn. Using OpenAlex-based retrieval, we produced 6,618 candidate successor matches and 601 best-match candidates (not all are true successors). In a first-pass screening of these candidates, we judged 459 pairs likely to describe the same project or a direct descendant; within this screened set, many successors show no observable change or mainly rhetorical change, while a smaller subset show procedural and/or methodological change. We selected 25 stratified cases for planned author interviews; interviews will begin only after staff review of protocol and consent materials.
+Selective AI/ML conferences increasingly incorporate ethics governance into peer review (ethics flags, impact statements). When reviewers raise ethics concerns and a paper is rejected or withdrawn, authors typically revise and submit elsewhere to a fresh reviewer pool. Those revisions can be substantive (data, evaluation, scope, release decisions) or rhetorical (expanded limitations and harms framing without changing the technical core). We study these choices by following ICLR 2021--2026 submissions whose reviews included ethics flags into the next public version of the project, and comparing the criticized submission, reviews, and successor paper side by side. Across 47,893 submissions and 185,194 public reviews, we identify 2,498 submissions with reviewer ethics flags, including 1,857 that were rejected or withdrawn. Using OpenAlex-based retrieval, we produced 6,618 candidate successor matches and 601 best-match candidates (not all are true successors). In a first-pass screening of these candidates, we judged 459 pairs likely to describe the same project or a direct descendant; within this screened set, many successors show no observable change or mainly rhetorical change, while a smaller subset show procedural and/or methodological change. We selected 25 stratified cases for author interviews and have begun recruitment; interviews are not yet complete.
 \end{abstract}
 
 %%
@@ -262,13 +262,24 @@ Automated retrieval cannot determine whether a later paper truly continues the s
 
 \subsection{Interviewing Authors}
 
-By comparing versions, we can see what changed, but we cannot reliably infer why authors changed one part of a project and left another untouched. We therefore plan semi-structured interviews with corresponding authors (or designated contacts) from a stratified subset of likely-valid pairs. Interviews will last approximately 30 minutes and will begin only after staff review of protocol and consent materials. The interview first asks authors to reconstruct how the project changed between versions and what constraints mattered; only afterward does it ask directly about ethics review and the shift to a different reviewer pool.
+By comparing versions, we can see what changed, but we cannot reliably infer why authors changed one part of a project and left another untouched. We therefore conduct semi-structured interviews with corresponding authors (or designated contacts) from a stratified subset of cases. We received staff approval to recruit and have sent outreach emails; at the time of writing, we are awaiting responses and interviews are not yet complete. Interviews are designed to last approximately 30 minutes. We send the consent form in advance and obtain verbal consent at the start of the call (with a separate prompt for permission to record audio).
+
+To keep recruitment consistent and to avoid priming participants toward any single interpretation, we used a short email template that (i) introduces the study at a high level, (ii) references the public paper pair we traced, and (iii) asks for a brief call. In prose, the template is:
+\begin{quote}
+Hello \{First name\},
+
+We are conducting a study on ethics review processes for AI conferences. We saw that your paper ``\{short paper title\}'' was initially rejected from ICLR \{year\} but later appeared as \{later venue and year\}. We would appreciate a brief video call (about 30 minutes) to learn about what changed between versions and what shaped those decisions.
+
+If you are willing, please choose a time at \{scheduling link\}. Participation is voluntary; you may decline or stop at any time.
+
+Sincerely, \{research team\}
+\end{quote}
 
 \section{Results}
 
 \subsection{The Validated Pair Set}
 
-The number of papers whose reviews included ethics flags rose from 107 in 2022 to 1,100 in 2026, and those flagged papers covered concerns about fairness and discrimination, privacy and safety, harmful applications, legal compliance, responsible research practice, and research integrity. From the 1,857 rejected or withdrawn papers in our corpus, our retrieval produced 601 best-match candidate successors. In a first-pass screening, we judged 459 of the 1,857 rejected/withdrawn cases likely to have a true successor in this best-match set. For planned interviews, we selected 25 cases to cover three steering patterns---cases where revisions are especially legible and substantive, cases where ethics-relevant changes were already present in the original submission, and cases where the flagged concern appears not to be taken up---while also balancing coverage across four issue areas (harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety). Interviews are pending staff OK.
+The number of papers whose reviews included ethics flags rose from 107 in 2022 to 1,100 in 2026, and those flagged papers covered concerns about fairness and discrimination, privacy and safety, harmful applications, legal compliance, responsible research practice, and research integrity. From the 1,857 rejected or withdrawn papers in our corpus, our retrieval produced 601 best-match candidate successors. In a first-pass screening, we judged 459 of the 1,857 rejected/withdrawn cases likely to have a true successor in this best-match set. For interviews, we selected 25 cases to cover three steering patterns---cases where revisions are especially legible and substantive, cases where ethics-relevant changes were already present in the original submission, and cases where the flagged concern appears not to be taken up---while also balancing coverage across four issue areas (harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety). Recruitment is underway; interviews are not yet complete.
 
 \subsection{What Changed in Later Versions}
 
@@ -278,7 +289,7 @@ The substantive changes in our interview sampling set often fall into a few recu
 
 \subsection{What Authors Said}
 
-Interviews are planned but not yet conducted. In the next milestone, we will ask authors to reconstruct what changed between the ICLR submission and the successor, what feedback mattered most, and what constrained revision before submitting to a different venue. We will then ask directly about ethics review and whether it influenced technical decisions, evaluation choices, release decisions, or only the framing presented to a new reviewer pool. We expect these interviews to clarify when ``rhetorical-only'' revisions reflect strategic reframing versus when they reflect real constraints on changing already-implemented systems.
+Interviews are in progress. We will ask authors to reconstruct what changed between the ICLR submission and the successor, what feedback mattered most, and what constrained revision before submitting to a different venue. We will then ask directly about ethics review and whether it influenced technical decisions, evaluation choices, release decisions, or only the framing presented to a new reviewer pool. We expect these interviews to clarify when rhetorical revisions reflect strategic reframing versus when they reflect real constraints on changing already-implemented systems.
 
 \section{Discussion}
 
