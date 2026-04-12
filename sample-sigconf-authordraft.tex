@@ -258,13 +258,13 @@ We then searched OpenAlex for later versions of each paper using full titles, ti
 
 \subsection{Reading Pairs and Coding Revision}
 
-Automated retrieval cannot determine whether a later paper truly continues the same project, so successor validation requires reading. In this milestone, we performed a preliminary screening of candidate pairs (LLM-assisted) to support sampling and planning. For each matched pair, we record (i) whether the later paper appears to be the same project or a direct descendant, and (ii) what kinds of changes are observable between versions (no change, mainly rhetorical change, or procedural/methodological change). This screening is not treated as ground truth; the next milestone is a human-coded validation pass with inter-rater checks on a subset.
+Automated retrieval cannot determine whether a later paper truly continues the same project, so successor validation requires reading. In this milestone, we used a preliminary screening of candidate pairs (LLM-assisted) to support sampling and planning: for each matched pair, we record whether the later paper appears to be the same project or a direct descendant, and we describe the kinds of changes that are observable between versions (no change, mainly rhetorical change, or procedural/methodological change). In the next milestone, we will replace this screening with a human-coded validation pass with inter-rater checks on a subset.
 
 \subsection{Interviewing Authors}
 
-By comparing versions, we can see what changed, but we cannot reliably infer why authors changed one part of a project and left another untouched. We therefore conduct semi-structured interviews with corresponding authors (or designated contacts) from a stratified subset of cases. We received staff approval to recruit and have sent outreach emails; at the time of writing, we are awaiting responses and interviews are not yet complete. Interviews are designed to last approximately 30 minutes. We send the consent form in advance and obtain verbal consent at the start of the call (with a separate prompt for permission to record audio).
+By comparing versions, we can see what changed, but we cannot reliably infer why authors changed one part of a project and left another untouched. We therefore conduct semi-structured interviews with corresponding authors (or designated contacts) from a stratified subset of cases; after receiving staff approval to recruit, we sent outreach emails and are now scheduling interviews as responses arrive. Interviews are designed to last approximately 30 minutes. We send the consent form in advance and obtain verbal consent at the start of the call (with a separate prompt for permission to record audio).
 
-To keep recruitment consistent and to avoid priming participants toward any single interpretation, we used a short email template that (i) introduces the study at a high level, (ii) references the public paper pair we traced, and (iii) asks for a brief call. In prose, the template is:
+To keep recruitment consistent and to avoid priming participants toward any single interpretation, we used a short email template that introduces the study at a high level, references the public paper pair we traced, and requests a brief call. The template has the following form:
 \begin{quote}
 Hello \{First name\},
 
@@ -279,7 +279,7 @@ Sincerely, \{research team\}
 
 \subsection{The Validated Pair Set}
 
-The number of papers whose reviews included ethics flags rose from 107 in 2022 to 1,100 in 2026, and those flagged papers covered concerns about fairness and discrimination, privacy and safety, harmful applications, legal compliance, responsible research practice, and research integrity. From the 1,857 rejected or withdrawn papers in our corpus, our retrieval produced 601 best-match candidate successors. In a first-pass screening, we judged 459 of the 1,857 rejected/withdrawn cases likely to have a true successor in this best-match set. For interviews, we selected 25 cases to cover three steering patterns---cases where revisions are especially legible and substantive, cases where ethics-relevant changes were already present in the original submission, and cases where the flagged concern appears not to be taken up---while also balancing coverage across four issue areas (harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety). Recruitment is underway; interviews are not yet complete.
+The number of papers whose reviews included ethics flags rose from 107 in 2022 to 1,100 in 2026, and those flagged papers covered concerns about fairness and discrimination, privacy and safety, harmful applications, legal compliance, responsible research practice, and research integrity. From the 1,857 rejected or withdrawn papers in our corpus, our retrieval produced 601 best-match candidate successors. In a first-pass screening, we judged 459 of the 1,857 rejected/withdrawn cases likely to have a true successor in this best-match set. For interviews, we selected 25 cases to cover three steering patterns---cases where revisions are especially legible and substantive, cases where ethics-relevant changes were already present in the original submission, and cases where the flagged concern appears not to be taken up---while also balancing coverage across four issue areas (harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety), and we have begun recruitment and scheduling as responses arrive.
 
 \subsection{What Changed in Later Versions}
 
@@ -289,7 +289,7 @@ The substantive changes in our interview sampling set often fall into a few recu
 
 \subsection{What Authors Said}
 
-Interviews are in progress. We will ask authors to reconstruct what changed between the ICLR submission and the successor, what feedback mattered most, and what constrained revision before submitting to a different venue. We will then ask directly about ethics review and whether it influenced technical decisions, evaluation choices, release decisions, or only the framing presented to a new reviewer pool. We expect these interviews to clarify when rhetorical revisions reflect strategic reframing versus when they reflect real constraints on changing already-implemented systems.
+In the interviews, we ask authors to reconstruct what changed between the ICLR submission and the successor, what feedback mattered most, and what constrained revision before submitting to a different venue; we then ask directly about ethics review and whether it influenced technical decisions, evaluation choices, release decisions, or only the framing presented to a new reviewer pool. These interviews are designed to clarify when rhetorical revisions reflect strategic reframing versus when they reflect real constraints on changing already-implemented systems.
 
 \section{Discussion}
 

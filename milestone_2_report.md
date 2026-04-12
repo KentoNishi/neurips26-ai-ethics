@@ -25,7 +25,7 @@ Milestone-2 status:
 - Selected a stratified interview sample of 25 cases spanning steering categories and ethics issue types, explicitly designed for coverage rather than representativeness:
   - steering quotas: 11 ``strictly meaningful'', 6 ``intrinsic only'', 8 ``unaddressed''
   - round-robin across four issue buckets: harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety
-- Received staff OK to recruit and sent outreach emails; we are currently awaiting responses and scheduling interviews.
+- After receiving staff approval to recruit, we sent standardized outreach emails and are now scheduling interviews as responses arrive.
 
 Preliminary ``what changed'' snapshot (triage labels on 459 likely-valid pairs):
 - 217: no observable change in successor
@@ -60,7 +60,7 @@ The purpose of this study is to understand whether and how conference ethics rev
 5. Store recordings/transcripts in access-controlled storage; de-identify transcripts for analysis; report results in aggregate.
 
 ## Section 8: Recruitment
-Recruitment will be conducted by email outreach to corresponding authors using publicly available contact information (e.g., institutional webpages, arXiv metadata, publicly listed author contact addresses). We will not recruit participants until we obtain an OK from course staff.
+Recruitment is conducted by email outreach to corresponding authors using publicly available contact information (e.g., institutional webpages, arXiv metadata, publicly listed author contact addresses). We received staff approval to recruit and have begun outreach.
 
 ## Section 10: Consent
 We will email participants a copy of the informed consent form in advance. At the start of the call, the interviewer will:
