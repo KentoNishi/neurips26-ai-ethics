@@ -1,7 +1,7 @@
 # CS2760 Project Milestone 2 (Qualitative)
 **Project:** Do AI Conferences’ Ethics Reviews Steer Research Practices?  
 **Team:** Kento Nishi, Alec Laprevotte, Isaiah Bullock, Mfoniso M. Andrew  
-**Date:** 2026-04-12
+**Date:** 2026-04-14
 
 ## 1) Updated project goal
 We study whether conference ethics review mechanisms (ethics flags, impact statements) measurably **steer subsequent research practice** after an ethics-flagged **rejection or withdrawal**. Specifically, we ask whether later versions show substantive changes (data, evaluation, scope, release decisions) versus mainly rhetorical changes (harms/limitations framing without technical revision).
@@ -25,7 +25,8 @@ Milestone-2 status:
 - Selected a stratified interview sample of 25 cases spanning steering categories and ethics issue types, explicitly designed for coverage rather than representativeness:
   - steering quotas: 11 strictly meaningful, 6 intrinsic only, 8 unaddressed
   - round-robin across four issue buckets: harmful applications; fairness/discrimination; responsible research practice; privacy/security/safety
-- After receiving staff approval to recruit, we sent standardized outreach emails and are now scheduling interviews as responses arrive.
+- After receiving staff approval to recruit, we sent standardized outreach emails on 2026-04-14 and are now scheduling interviews as responses arrive.
+- To contextualize the author interviews, we are also pursuing a process-level interview with a former program chair involved in ethics review.
 
 Preliminary ``what changed'' snapshot (triage labels on 459 likely-valid pairs):
 - 217: no observable change in successor
