@@ -5,4 +5,13 @@ __pycache__/
 data/
 exports/
 *.pdf
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
 .DS_Store
