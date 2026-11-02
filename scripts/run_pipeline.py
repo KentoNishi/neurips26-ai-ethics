@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the local pipeline without package installation."""
+"""Collect ICLR submissions and reviews, then search for matching papers."""
 
 from __future__ import annotations
 

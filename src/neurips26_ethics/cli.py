@@ -11,7 +11,9 @@ from .pipeline import EthicsPipeline
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Run the ICLR ethics scraping and paper-matching pipeline.")
+    parser = argparse.ArgumentParser(
+        description="Collect ICLR ethics flags from OpenReview and match submissions to papers in OpenAlex."
+    )
     parser.add_argument(
         "--data-dir",
         default="data/papers",
@@ -28,17 +30,17 @@ def build_parser() -> argparse.ArgumentParser:
         "--top-k-matches",
         type=int,
         default=10,
-        help="Number of candidate successor papers to retain per source paper.",
+        help="Number of candidate matches to retain per ICLR submission.",
     )
     parser.add_argument(
         "--skip-pdf-downloads",
         action="store_true",
-        help="Do not download OpenReview PDFs for ethics-flagged papers.",
+        help="Skip PDF downloads for ethics-flagged submissions.",
     )
     parser.add_argument(
         "--refresh-openreview",
         action="store_true",
-        help="Ignore cached OpenReview harvest files and fetch again.",
+        help="Refresh OpenReview data from the API.",
     )
     return parser
 

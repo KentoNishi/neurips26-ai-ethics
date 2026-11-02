@@ -1,4 +1,4 @@
-"""Targeted online rematching for weak or missing successor pairs."""
+"""Repeat OpenAlex searches for missing, low-scoring, invalid, or uncertain matches."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from .matching import OpenAlexMatcher
 
 
 class TargetedRematcher:
-    """Refreshes only weak or missing matches for mature cohorts."""
+    """Searches again for selected submissions up to a specified year."""
 
     def __init__(
         self,

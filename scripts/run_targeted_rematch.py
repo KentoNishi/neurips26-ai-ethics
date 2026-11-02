@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh only weak or missing successor matches for mature source cohorts."""
+"""Repeat paper searches for missing, low-scoring, invalid, or uncertain matches."""
 
 from __future__ import annotations
 
@@ -17,7 +17,9 @@ from neurips26_ethics.rematch import TargetedRematcher
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Targeted online rematch for weak or missing successor pairs.")
+    parser = argparse.ArgumentParser(
+        description="Repeat OpenAlex searches for missing, low-scoring, invalid, or uncertain paper matches."
+    )
     parser.add_argument("--data-dir", default="data/papers")
     parser.add_argument("--max-source-year", type=int, default=2024)
     parser.add_argument("--min-score", type=float, default=0.65)

@@ -1,16 +1,12 @@
 # NeurIPS 2026 Ethics Flags
 
-Research code for the NeurIPS 2026 ethics-flags resubmission study.
-
-This repository contains the OpenReview harvesting, paper-matching, and targeted rematching code used to trace ethics-flagged ICLR submissions into later public versions. It is research code for internal project use, not a polished public package.
+Code for tracing ethics-flagged ICLR submissions to later public versions. The pipeline collects submissions and reviews from OpenReview and ranks candidate matches in OpenAlex using titles, authors, abstracts, and publication dates.
 
 ## Layout
 
-- `src/neurips26_ethics/`: pipeline, OpenReview client, matching logic, and utilities.
-- `scripts/run_pipeline.py`: full local pipeline entrypoint.
-- `scripts/run_targeted_rematch.py`: targeted refresh for weak or missing successor matches.
-
-Generated data, exports, PDFs, local environments, and credentials are intentionally ignored.
+- `src/neurips26_ethics/`: data collection, paper matching, and file utilities.
+- `scripts/run_pipeline.py`: collect submissions and reviews, identify ethics-flagged submissions, and search for candidate matches.
+- `scripts/run_targeted_rematch.py`: repeat the search for submissions with missing or low-scoring matches, or matches marked invalid or uncertain.
 
 ## Usage
 
@@ -19,10 +15,10 @@ python -m pip install -e .
 python scripts/run_pipeline.py --data-dir data/papers --years 2021 2022 2023 2024 2025 2026
 ```
 
-To rerun targeted matching for older source cohorts:
+To rerun matching for selected submissions (through 2024 by default):
 
 ```bash
 python scripts/run_targeted_rematch.py --data-dir data/papers
 ```
 
-Optional environment variables may be placed in a local `.env` file.
+Results are written to `data/papers/`. Optional environment variables can be supplied in a local `.env` file.

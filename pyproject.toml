@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "neurips26-ethics"
 version = "0.1.0"
-description = "ICLR ethics flags + resubmission matching."
+description = "Collect ICLR ethics flags and match submissions to later public versions."
 requires-python = ">=3.9"
 dependencies = [
   "requests>=2.31",
